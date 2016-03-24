@@ -1,4 +1,4 @@
-var app = angular.module("BagsApp", ["ui.router", "ui.bootstrap"]);
+var app = angular.module("BagsApp", ["ui.router", "ui.bootstrap", "BagCtrls"]);
 
 app.config([
 	"$stateProvider",
@@ -10,7 +10,8 @@ app.config([
 		$stateProvider
 		.state("bags", {
 			url: "/bags",
-			templateUrl: "app/views/showBags.html"
+			templateUrl: "app/views/bags.html",
+			controller: "AllBagsCtrl"
 		});
 
 		$locationProvider.html5Mode(true);

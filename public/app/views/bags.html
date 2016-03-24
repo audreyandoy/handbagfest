@@ -1,0 +1,17 @@
+<h1>Spring Handbags</h1>
+
+<div ng-controller="AllBagsCtrl">
+	<div class="row" ng-repeat="bag in bags track by $index">
+	  <div class="col-sm-6 col-md-4">
+	    <div class="thumbnail">
+	      <img class="img-responsive" ng-src="{{bag.image_url}}">
+	      <div class="caption">
+	        <h3>{{ bag.brand }} {{ bag.type }}</h3>
+	        <h4>${{ bag.price }}</h4>
+	        <p>{{ bag.details }}</p>
+	        <p><a href="#" class="btn btn-primary" role="button">Edit</a> <a href="#" class="btn btn-default" role="button">Delete</a></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
