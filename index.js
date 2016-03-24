@@ -10,16 +10,16 @@ var secret = "mysupersecretpassword";
 
 
 var mongoose = require('mongoose');
-var User = require('./models/user');
-var Bag = require('./models/bag');
+// var User = require('./models/user');
+// var Bag = require('./models/bag');
 mongoose.connect('mongodb://localhost/bags');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/users', require('./controllers/users'));
-app.use('/api/bags', require('./controllers/bags'));
+// app.use('/api/users', require('./controllers/users'));
+// app.use('/api/bags', require('./controllers/bags'));
 
 app.use('/api/bags', expressJWT({secret: secret})
   .unless({path: ['/api/bags'], method: 'post'}));
