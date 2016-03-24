@@ -7,6 +7,7 @@ var BagSchema = new mongoose.Schema({
 	price: Number,
 	color: String,
 	details: String,
+	image_url: String
 });
 
 module.exports = mongoose.model("Bag", BagSchema);

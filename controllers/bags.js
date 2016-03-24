@@ -23,6 +23,7 @@ router.put("/:id", function(req, res) {
 		if (req.body.price) bag.price = req.body.price;
 		if (req.body.color) bag.color = req.body.color;
 		if (req.body.details) bag.details = req.body.details;
+		if (req.body.image_url) bag.image_url = req.body.image_url;
 
 		bag.save(function(err) {
 			if (err) return res.status(500).send(err);
