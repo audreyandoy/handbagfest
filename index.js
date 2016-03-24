@@ -4,7 +4,7 @@ var path = require('path');
 var expressJWT = require('express-jwt');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcrypt');
-var app = express;
+var app = express();
 
 var secret = "mysupersecretpassword";
 
