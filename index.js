@@ -5,7 +5,6 @@ var expressJWT = require('express-jwt');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcrypt');
 var app = express;
-var mongodb = require('mongodb');
 
 var secret = "mysupersecretpassword";
 
