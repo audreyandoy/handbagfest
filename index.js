@@ -13,9 +13,9 @@ var secret = "mysupersecretpassword";
 var mongoose = require('mongoose');
 var User = require('./models/user');
 var Bag = require('./models/bag');
-mongoose.connect('mongodb://localhost/bags');
 
 var uri = 'mongodb://heroku_k97wct7l:sfvti4ubfjcgfbrij9ebhfeemk@ds025239.mlab.com:25239/heroku_k97wct7l';
+mongoose.connect(uri);
 
 
 app.use(bodyParser.json());
