@@ -8,7 +8,6 @@ var app = express();
 
 var secret = "mysupersecretpassword";
 
-
 var mongoose = require('mongoose');
 var User = require('./models/user');
 var Bag = require('./models/bag');
@@ -41,8 +40,6 @@ app.post('/api/auth', function(req, res) {
     });
   });
 });
-
-
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
