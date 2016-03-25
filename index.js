@@ -5,17 +5,14 @@ var expressJWT = require('express-jwt');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcrypt');
 var app = express();
-var mongodb = require('mongodb');
 
 var secret = "mysupersecretpassword";
-
 
 var mongoose = require('mongoose');
 var User = require('./models/user');
 var Bag = require('./models/bag');
 
-var uri = proccess.env.MONGO;
-mongoose.connect(uri);
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/api/bags');
 
 
 app.use(bodyParser.json());

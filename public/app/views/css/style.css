@@ -1,0 +1,40 @@
+body {
+  background-image: url('http://cdn.pcwallart.com/images/cherry-blossom-flower-branch-wallpaper-3.jpg');
+}
+
+.title{
+  margin-top: 200px;
+}
+
+.navbar-default {
+    background-color: #ffb7c5;
+    border: none;
+    color: white;
+
+}
+
+.well {
+  background-color: #ffb7c5;
+  border-color: #ffb7c5;
+  border-radius: 50px;
+}
+.container {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+  margin-top: 200px;
+  margin-left: 300px;
+  background-color: #ffb7c5;
+  border-color: #ffb7c5;
+  width: 500px;
+}
+
+.login {
+  margin-left: 100px;
+  text-align: center;
+  width: 300px;
+}
+
+
