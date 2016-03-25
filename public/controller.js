@@ -22,20 +22,6 @@ angular.module("BagCtrls", [])
      $state.reload();
   }
 }])
-.controller('SignupCtrl', ['$scope', '$http', '$location', function(
-  $scope, $http, $location) {
-  $scope.user = {
-    email: '',
-    password: ''
-  };
-  $scope.userSignup = function() {
-    $http.post('/api/users', $scope.user).then(function success(res) {
-      $location.path('/bags');
-    }, function error(res) {
-      console.log(res);
-    });
-  }
-}])
 .controller('LoginCtrl', ['$scope', '$http', '$location', 'Auth', 
   function($scope, $http, $location, Auth) {
   $scope.user = {

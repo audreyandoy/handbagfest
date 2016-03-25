@@ -17,16 +17,6 @@ app.config([
 			templateUrl: "app/views/bags.html",
 			controller: "AllBagsCtrl"
 		})
-		.state("bagFavs", {
-			url: "/favorites",
-			templateUrl: "app/views/bagFavs.html",
-			controller: "FavBags"
-		})
-		.state('signup', {
-    url: '/signup',
-    templateUrl: 'app/views/signup.html',
-    controller: 'SignupCtrl'
-  	})
   	.state('login', {
     url: '/login',
     templateUrl: 'app/views/login.html',
