@@ -16,10 +16,10 @@ angular.module("BagCtrls", [])
 }])
 .controller('NavCtrl', ['$scope', 'Auth', '$state', function($scope, Auth, $state) {
   $scope.Auth = Auth;
-
   $scope.logout = function() {
      Auth.removeToken();
      $state.reload();
+     console.log('My token', Auth.getToken());
   }
 }])
 .controller('LoginCtrl', ['$scope', '$http', '$location', 'Auth', 

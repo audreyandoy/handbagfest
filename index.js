@@ -5,14 +5,16 @@ var expressJWT = require('express-jwt');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcrypt');
 var app = express();
+var mongodb = require('mongodb');
 
 var secret = "mysupersecretpassword";
+
 
 var mongoose = require('mongoose');
 var User = require('./models/user');
 var Bag = require('./models/bag');
 
-var uri = 'mongodb://heroku_k97wct7l:sfvti4ubfjcgfbrij9ebhfeemk@ds025239.mlab.com:25239/heroku_k97wct7l';
+var uri = proccess.env.MONGO;
 mongoose.connect(uri);
 
 
@@ -40,6 +42,8 @@ app.post('/api/auth', function(req, res) {
     });
   });
 });
+
+
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
